@@ -1,0 +1,29 @@
+<nav class="nav" [ngClass]="{'affix': showBackgroundNavigation}">
+  <div class="container">
+    <div class="logo">
+      <a href="#">
+        <div *ngIf="showBackgroundNavigation; else onlyLogo" class="logo-text">
+          <label class="padding-right-25">{{ 'Westtrailers' | uppercase }}</label>
+          <img src="assets/LogoWesttrailersCropped.png" alt="Logo Westtrailers" class="width-15">
+        </div>
+      </a>
+    </div>
+    <div id="mainListDiv" class="main_list" [ngClass]="{'show_list': showSideMenu}" @fade>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Trailers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <span class="navTrigger" (click)="toggleSideMenu()" [ngClass]="{'active': showSideMenu}">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+  </div>
+</nav>
+
+<ng-template #onlyLogo>
+  <img src="assets/LogoWesttrailersCropped.png" alt="Logo Westtrailers" class="width-70 padding-left-40 only-logo">
+</ng-template>

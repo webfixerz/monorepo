@@ -1,18 +1,17 @@
 import { Routes } from '@angular/router';
-import { HomePageComponent } from './container/home-page/home-page.component';
 
 export const APP_ROUTES: Routes = [
   {
     path: '',
-    component: HomePageComponent,
+    loadChildren: () => import('../../../../libs/fautras/home-page/src').then(m => m.FautrasHomePageModule),
   },
   {
     path: 'trailers',
-    component: HomePageComponent,
+    loadChildren: '@webfixerz/fautras/home-page#FautrasHomePageModule',
   },
   {
     path: 'contact',
-    component: HomePageComponent,
+    loadChildren: '@webfixerz/fautras/home-page#FautrasHomePageModule',
   },
   {
     path: '**',

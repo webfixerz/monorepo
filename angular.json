@@ -51,7 +51,7 @@
               "apps/fautras/src/favicon.ico",
               "apps/fautras/src/assets"
             ],
-            "styles": ["apps/fautras/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/purple-green.css", "apps/fautras/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -142,6 +142,31 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/fautras-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "fautras-home-page": {
+      "projectType": "library",
+      "root": "libs/fautras/home-page",
+      "sourceRoot": "libs/fautras/home-page/src",
+      "prefix": "webfixerz",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/fautras/home-page/src/**/*.ts",
+              "libs/fautras/home-page/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fautras/home-page"],
+          "options": {
+            "jestConfig": "libs/fautras/home-page/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

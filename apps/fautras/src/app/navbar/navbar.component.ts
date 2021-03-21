@@ -4,7 +4,7 @@ import { Routes } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'navbar',
+  selector: 'webfixerz-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   animations: [
@@ -19,8 +19,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 export class NavbarComponent {
   routes: Routes = APP_ROUTES;
-  showBackgroundNavigation: boolean = false;
-  showSideMenu: boolean = false;
+  showBackgroundNavigation = false;
+  showSideMenu = false;
 
   constructor() {}
 

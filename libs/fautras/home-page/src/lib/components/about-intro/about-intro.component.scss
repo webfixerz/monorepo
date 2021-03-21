@@ -1,0 +1,83 @@
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Vollkorn", serif;
+  color: black;
+  font-size: 6rem;
+}
+
+.voordeel {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Vollkorn", serif;
+    color: black;
+    font-size: 3rem;
+    font-weight: normal;
+  }
+
+  p {
+    text-align: center;
+    font-family: "Vollkorn", serif;
+    color: grey;
+    font-size: 2rem;
+  }
+
+  > img {
+    max-width: 300px;
+  }
+
+  > .text-side {
+    border-left: 1px solid black;
+    width: 400px;
+
+    &--left {
+      margin-right: 50px;
+      padding-left: 20px;
+    }
+
+    &--right {
+      padding-left: 20px;
+      margin-left: 50px;
+    }
+  }
+}
+
+.contact-link {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+}
+
+@media screen and (max-width:840px) {
+  .voordeel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > .text-side {
+      &--left {
+        margin-right: 0;
+      }
+
+      &--right {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:450px) {
+  .voordeel {
+    .text-side {
+      width: 300px;
+    }
+  }
+}
